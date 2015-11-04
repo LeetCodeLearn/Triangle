@@ -33,6 +33,18 @@ public:
         
         return *std::min_element(rowSumResult.begin(), rowSumResult.end());
     }
+    
+    
+    //bottom to top  省去了最后获取最小值的步骤。
+    /*
+    
+    int size=triangle.size();
+    vector<int> result(triangle[size-1]);
+    for(int i=size-2;i>=0;--i)
+        for(int j=0;j<=i;++j)
+            result[j]=triangle[i][j]+min(result[j],result[j+1]);
+            return result[0];
+    */
 };
 
 
